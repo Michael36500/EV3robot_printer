@@ -21,5 +21,6 @@ for line in img:
             sgm = 1
         arli.append (sgm)
     print(arli)
-    # out.append (arli)
+    out.append (arli)
+    arli = []
 # print(out)
