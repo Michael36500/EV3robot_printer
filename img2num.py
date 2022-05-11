@@ -23,4 +23,4 @@ for line in img:
     print(arli)
     out.append (arli)
     arli = []
-# print(out)
+print(out)
