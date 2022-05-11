@@ -24,3 +24,8 @@ for line in img:
     out.append (arli)
     arli = []
 print(out)
+
+############################
+# ZJEDNODUŠENÍ + ZRYCHLENÍ #
+############################    
+
