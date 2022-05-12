@@ -1,20 +1,23 @@
 import cv2
 import numpy as np
-import datetime
+from datetime import datetime
 
 ############################################################################################################################################################
 #!! pozor na orientaci, teď je normálně (hlavou vzhůru)
+# dám začátek programu
+Time = datetime.now()
+print(Time)
+# micstart = Time.microsecond
+# secstart = Time.second
 
 #####################
 # DĚLÁM ARRAY ČÍSEL #
 #####################
-Time = datetime.now()
-print("microsecond =", Time.microsecond)
 out = []
 multiout = []
 arli = []
 
-path = "img.jpg"
+path = "img3.jpg"
 
 img = cv2.imread(path, 0)
 img = img.astype(np.uint8)
@@ -106,3 +109,11 @@ out.append (cis)
 #         #     p_rad = 0
 #             # hled = 1 if hled == 0 else 0
 # print(out)
+
+# konec
+Time = datetime.now()
+print(Time)
+# micend = Time.microsecond
+# secend = Time.second
+# print(micend - micstart)
+# print(secend - secstart)
