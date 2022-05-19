@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
-from datetime import datetime
+# from datetime import datetime
+import pyperclip
+
+path = "img.jpg"
 
 ############################################################################################################################################################
 #!! pozor na orientaci, teď je normálně (hlavou vzhůru)
@@ -65,5 +68,10 @@ def Nums(path):
     
     return out
 
-print(Nums("img.jpg"))
+# print(Nums(path))
 
+syntax = "robot = " + str(Nums(path))
+
+
+
+pyperclip.copy(syntax)
