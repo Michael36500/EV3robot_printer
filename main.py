@@ -63,7 +63,7 @@ def push_down():
         M_pero.run_target(200, 0)
         is_up = False
 
-# dojede na začátek
+# dojede na začátek 
 def jdi_na():
     M_vozik.run(120)
     while True:

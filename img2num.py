@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 # from datetime import datetime
 import pyperclip
+from tqdm import tqdm
 
 path = "img.jpg"
 
@@ -22,7 +23,7 @@ def Nums(path):
     # protože pro další blok potřebuji jednodimenziální pole, ale může se hodit více, tak dělám pole OUT (jedno) a MULTIOUT (multi)
     th, img = cv2.threshold(img, 128, 255, cv2.THRESH_BINARY)
     # print(img)
-    for line in img:
+    for line in tqdm(img):
         for sgm in line:
             if sgm == 255:
                 sgm = 1
@@ -47,7 +48,7 @@ def Nums(path):
 
 
 
-    for pos in inp:
+    for pos in tqdm(inp):
         if pos == 2:
             out.append (cis)
             cis = 0
@@ -66,12 +67,13 @@ def Nums(path):
 
     out.append (cis)
     
+    out = "robot = " + str(out)
+
     return out
 
 # print(Nums(path))
 
-syntax = "robot = " + str(Nums(path))
-
-
-
+# copy in clipboarad
+syntax = Nums(path)
 pyperclip.copy(syntax)
+print("Copied")
