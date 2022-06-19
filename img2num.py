@@ -18,6 +18,7 @@ def Nums(path):
     arli = []
 
     img = cv2.imread(path, 0)
+    img = cv2.flip(img, 1)
     img = img.astype(np.uint8)
 
     # protože pro další blok potřebuji jednodimenziální pole, ale může se hodit více, tak dělám pole OUT (jedno) a MULTIOUT (multi)
